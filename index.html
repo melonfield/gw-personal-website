@@ -1,10 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmins="http://www.w3.org/1999/xhtml">
 <head>
   <meta charset="UTF-8">
   <title>Final Project</title>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<!-- Google Analytics Script -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-77508015-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+  <script type="text/javascript" src="js/stepcarousel.js">
+
+  /***********************************************
+  * Step Carousel Viewer script- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+  * Visit http://www.dynamicDrive.com for hundreds of DHTML scripts
+  * Please keep this notice intact
+  ***********************************************/
+
+  </script>
+
+  <style type="text/css">
+
+  .stepcarousel{
+  position: relative; /*leave this value alone*/
+  border: 10px solid white;
+  overflow: scroll; /*leave this value alone*/
+  width: 600px; /*Width of Carousel Viewer itself*/
+  height: 600px; /*Height should enough to fit largest content's height*/
+  -webkit-box-sizing: border-box; /* set box model so container width and height value includes any padding/border defined */
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  }
+
+  .stepcarousel .belt{
+  position: absolute; /*leave this value alone*/
+  left: 0;
+  top: 0;
+  }
+
+  .stepcarousel .panel{
+  float: left; /*leave this value alone*/
+  overflow: hidden; /*clip content that go outside dimensions of holding panel DIV*/
+  margin: 10px; /*margin around each panel*/
+  width: 600px; /*Width of each panel holding each content. If removed, widths should be individually defined on each content DIV then. */
+  }
+
+  span.paginatecircle{ /* CSS for paginate circle spans. Required */
+  background: white;
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 6px;
+  height: 6px;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 4px;
+  }
+
+  span.paginatecircle:hover{
+  background: gray;
+  }
+
+  span.paginatecircle.selected{
+  background: black;
+  }
+
+  </style>
+
+
+
+  <script type="text/javascript">
+
+  stepcarousel.setup({
+  	galleryid: 'mygallery', //id of carousel DIV
+  	beltclass: 'belt', //class of inner "belt" DIV containing all the panel DIVs
+  	panelclass: 'panel', //class of panel DIVs each holding content
+  	autostep: {enable:true, moveby:1, pause:3000},
+  	panelbehavior: {speed:500, wraparound:true, wrapbehavior:'slide', persist:true},
+  	defaultbuttons: {enable: true, moveby: 1, leftnav: ['img/darrowl.png', -65, 300], rightnav: ['img/darrowr.png', 5, 300]},
+  	statusvars: ['statusA', 'statusB', 'statusC'], //register 3 variables that contain current panel (start), current panel (last), and total panels
+  	contenttype: ['inline'] //content setting ['inline'] or ['ajax', 'path_to_external_file']
+  })
+
+  </script>
 </head>
 <body>
   <header>
@@ -14,13 +101,13 @@
     <div class="menu">
       <ul>
         <li>
-          <a href="https://www.youtube.com/watch?v=G9SxMmk2emA">Dank</a>
+          <a href="#banner">Dank</a>
         </li>
         <li>
-          <a href="https://www.youtube.com/watch?v=kOCxHu_F5xo">Memes</a>
+          <a href="#contact">Memes</a>
         </li>
         <li>
-          <a href="https://www.youtube.com/watch?v=diwv3-03i8g">Aniki</a>
+          <a href="#video">Aniki</a>
         </li>
       </ul>
     </div>
@@ -75,32 +162,6 @@
   </div>
 </section>
 
-
-<!--
-<section id="wheel">
-  <div class="carouselbox">
-      <div class="buttons">
-        <button class="prev">
-          <span class="offscreen">Previous</span>
-        </button>
-        <button class="next">
-          <span class="offscreen">Next</span>
-        </button>
-      </div>
-    <ol class="content">
-      <li>1</li>
-      <li>2</li>
-      <li>3</li>
-      <li>4</li>
-    </ol>
-  </div>
-</section>
-
-
-<section id="view_more">
-
-</section>!-->
-
 <!--Alex says "to margin center use : 0, auto" -->
 
 
@@ -139,9 +200,72 @@
 
 <section id="video">
   <div class="vid-container">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/tMgkt9jdjTU?autoplay=1" frameborder="0" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/stgrSjynPKs?autoplay=1" frameborder="0" allowfullscreen></iframe>
   </div>
 </section>
+
+<section id="carousel">
+  <p>OVER 1200+ RARE MEMES</p>
+  <text>V THESE BUTTONS STILL LOOK LIKE SHIT V</text>
+  <div class="carousel_countainer">
+  <center>
+  <div id="mygallery" class="stepcarousel">
+  <div class="belt">
+
+  <div class="panel">
+  <img src="img/0021.jpg" width="600" height="400" alt=""/>
+  </div>
+
+  <div class="panel">
+  <img src="img/0030.jpg" width="600" height="400" alt=""/>
+  </div>
+
+  <div class="panel">
+  <img src="img/0323.png" width="600" height="400" alt=""/>
+  </div>
+
+  <div class="panel">
+  <img src="img/0205.png" width="600" height="400" alt=""/>
+  </div>
+
+  <div class="panel">
+  <img src="img/0266.jpg" width="600" height="400" alt=""/>
+  </div>
+
+  <div class="panel">
+  <img src="img/1175.jpg" width="600" height="400" alt=""/>
+  </div>
+
+  <div class="panel">
+  <img src="img/1028.png" width="600" height="400" alt=""/>
+  </div>
+
+  <div class="panel">
+  <img src="img/0529.jpg" width="600" height="400" alt=""/>
+  </div>
+
+  <div class="panel">
+  <img src="img/0583.jpg" width="600" height="400" alt=""/>
+  </div>
+
+  <div class="panel">
+  <img src="img/0634.png" width="600" height="400" alt=""/>
+  </div>
+
+  <div class="panel">
+  <img src="img/0688.jpg" width="600" height="400" alt=""/>
+  </div>
+
+  </div>
+  </div>
+
+  <p id="mygallery-paginate">
+  <span class="paginatecircle" data-moveby="1"></span>
+  </p>
+</center>
+</div>
+</section>
+
 
 <footer>
   <div class="copyright">
